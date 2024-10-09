@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e4f9f5;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #40514e;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.logo span {
+    margin-right: 10px;
+}
+
+#logo-text-cn, #logo-text-en {
+    font-weight: bold;
+}
+
+#language-toggle {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #11999e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#language-toggle option {
+    background-color: #40514e;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+
+.char-type-btn {
+    padding: 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    background-color: #11999e;
+    border: none;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.char-type-btn:hover {
+    background-color: #30e3ca;
+}
+
+.char-type-btn.active {
+    background-color: #40514e;
+}
+
+button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #11999e;
+    border: none;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #30e3ca;
+}
+
+button:active {
+    background-color: #11999e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+}
+
+input[type="number"], textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#lengthDisplay {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#generatedPasswordsTitle {
+    font-size: 1.2em;
+}
+
+#generateBtn {
+    display: block;
+    margin: 20px auto;
+}
+
+label[for="allowDuplicates"] {
+    display: flex;
+    align-items: center;
+}
+
+#allowDuplicates {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>密码生成器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="logo">
+            <span id="logo-text-cn">随机数</span>
+        </div>
+        <select id="language-toggle" onchange="toggleLanguage()">
+            <option value="cn">中文</option>
+            <option value="en">English</option>
+        </select>
+    </div>
+    <div class="container">
+        <h1 data-translation="title">密码生成器</h1>
+        <div class="input-group">
+            <label for="numPasswords" data-translation="numPasswords">请输入要生成的密码数量:</label>
+            <input type="number" id="numPasswords" min="1" required oninput="validateInput(this)">
+        </div>
+        
+        <div class="input-group">
+            <label for="passwordLength" data-translation="passwordLength">请输入每个密码的长度[8到32个字符之间]:</label>
+            <div style="display: flex; align-items: center;">
+                <span id="lengthDisplay">8</span>
+                <input type="range" id="passwordLength" min="8" max="32" oninput="updateLengthDisplay()">
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <label for="charTypes" data-translation="charTypes">请选择要包含的字符类型:</label>
+            <div class="button-group">
+                <button class="char-type-btn" data-type="1" data-translation="charTypeUpper">大写字母</button>
+                <button class="char-type-btn" data-type="2" data-translation="charTypeLower">小写字母</button>
+                <button class="char-type-btn" data-type="3" data-translation="charTypeNumber">数字</button>
+                <button class="char-type-btn" data-type="4" data-translation="charTypeSpecial">特殊字符</button>
+            </div>
+        </div>
+        
+        <div class="input-group" style="display: flex; align-items: center;">
+            <input type="checkbox" id="allowDuplicates" style="width: 20px; height: 20px; margin-right: 10px;">
+            <label for="allowDuplicates" data-translation="allowDuplicates" style="display: flex; align-items: center;">&nbsp;允许密码重复</label>
+        </div>
+        
+        <button onclick="generatePasswords()" data-translation="generateBtn" style="display: block; margin: 20px auto;">生成密码</button>
+        
+        <h2 data-translation="generatedPasswordsTitle">已生成0个密码</h2>
+        <textarea id="passwordsOutput" rows="10" readonly></textarea>
+        
+        <div class="button-group">
+            <button onclick="copyToClipboard()" data-translation="copyBtn">复制密码</button>
+            <button onclick="exportToFile('txt')" data-translation="exportTxtBtn">导出为TXT</button>
+            <button onclick="exportToFile('csv')" data-translation="exportCsvBtn">导出为CSV</button>
+        </div>
+    </div>
+
+    <script src="language.js"></script>
+    <script src="validation.js"></script>
+    <script src="passwordGenerator.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
